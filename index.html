@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Chọn tài liệu hướng dẫn dòng máy AQUA</title>
+</head>
+<body>
+
+    <h2>Chọn model AQUA để xem tài liệu</h2>
+
+    <select id="modelSelect" onchange="showLink()">
+        <option value="">-- Chọn Model --</option>
+        <option value="https://instagram.com/">AW120-B2868B</option>
+        <option value="">Model B</option>
+    </select>
+
+    <p id="result"></p>
+
+    <script>
+        function showLink() {
+            var select = document.getElementById("modelSelect");
+            var result = document.getElementById("result");
+            var link = select.value;
+
+            if (link) {
+                result.innerHTML = 'Bảng hướng dẫn: <a href="' + link + '" target="_blank">Xem</a>';
+            } else {
+                result.innerHTML = "";
+            }
+        }
+    </script>
+</body>
+</html>
