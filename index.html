@@ -2,10 +2,28 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Chọn tài liệu hướng dẫn dòng máy AQUA</title>
+    <title>Chọn Model Tài liệu (Bảo mật)</title>
+    <style>
+        /* Ẩn phần chọn model đi lúc đầu */
+        #content {
+            display: none;
+            margin-top: 20px;
+        }
+        .error {
+            color: red;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
 
+    <!-- PHẦN NHẬP MẬT KHẨU -->
+    <div id="loginBox">
+        <h2>Vui lòng nhập mật khẩu để tiếp tục</h2>
+        <input type="password" id="passwordInput" placeholder="Nhập mật khẩu...">
+        <button onclick="checkPassword()">Xác nhận</button>
+        <p id="errorMsg" class="error"></p>
+    </div>
     <h2>Chọn model AQUA để xem tài liệu</h2>
 
     <select id="modelSelect" onchange="showLink()">
