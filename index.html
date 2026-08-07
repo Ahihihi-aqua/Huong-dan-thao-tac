@@ -31,19 +31,26 @@
         <option value="https://vnexpress.net/">AW120-B2868B</option>
         <option value="https://drive.google.com/file/d/1klANtZkvvKTe2Spd-KCXVgPcxdB4YClF/view?usp=drive_link">GEA</option>
     </select>
-
-    <p id="result"></p>
+<p id="result"></p>
+    </div>
 
     <script>
-        function showLink() {
-            var select = document.getElementById("modelSelect");
-            var result = document.getElementById("result");
-            var link = select.value;
+        // Đặt mật khẩu của bạn ở đây
+        var matKhauDung = "123456"; 
 
-            if (link) {
-                result.innerHTML = 'Bảng hướng dẫn: <a href="' + link + '" target="_blank">Xem</a>';
+        function checkPassword() {
+            var inputVal = document.getElementById("passwordInput").value;
+            var errorMsg = document.getElementById("errorMsg");
+            var loginBox = document.getElementById("loginBox");
+            var content = document.getElementById("content");
+
+            if (inputVal === matKhauDung) {
+                // Nếu đúng mật khẩu: ẩn ô đăng nhập, hiện phần chọn model lên
+                loginBox.style.display = "none";
+                content.style.display = "block";
             } else {
-                result.innerHTML = "";
+                // Nếu sai: hiện thông báo lỗi
+                errorMsg.innerHTML = "Mật khẩu không đúng, vui lòng thử lại!";
             }
         }
     </script>
