@@ -24,14 +24,19 @@
         <button onclick="checkPassword()">Xác nhận</button>
         <p id="errorMsg" class="error"></p>
     </div>
-    <h2>Chọn model AQUA để xem tài liệu</h2>
 
-    <select id="modelSelect" onchange="showLink()">
-        <option value="">-- Chọn Model --</option>
-        <option value="https://vnexpress.net/">AW120-B2868B</option>
-        <option value="https://drive.google.com/file/d/1klANtZkvvKTe2Spd-KCXVgPcxdB4YClF/view?usp=drive_link">GEA</option>
-    </select>
-<p id="result"></p>
+    <!-- PHẦN NỘI DUNG TRANG WEB (BỊ ẨN KHI CHƯA NHẬP ĐÚNG MẬT KHẨU) -->
+    <div id="content">
+        <h2>Chọn Model để xem tài liệu</h2>
+
+        <select id="modelSelect" onchange="showLink()">
+            <option value="">-- Chọn Model --</option>
+            <!-- Thay link Google Drive của bạn vào đây -->
+            <option value="https://drive.google.com/file/d/1klANtZkvvKTe2Spd-KCXVgPcxdB4YClF/view?usp=drive_link">GEA Safety 1</option>
+            <option value="https://drive.google.com/file/d/1x0BTGENxCVFoW7U45hUemh93Jx-UwJZ_/view?usp=drive_link">GEA Safety 2</option>
+        </select>
+
+        <p id="result"></p>
     </div>
 
     <script>
