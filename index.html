@@ -31,7 +31,6 @@
 
         <select id="modelSelect" onchange="showLink()">
             <option value="">-- Chọn Model --</option>
-            <!-- Thay link Google Drive của bạn vào đây -->
             <option value="https://drive.google.com/file/d/1klANtZkvvKTe2Spd-KCXVgPcxdB4YClF/view?usp=drive_link">GEA Safety 1</option>
             <option value="https://drive.google.com/file/d/1x0BTGENxCVFoW7U45hUemh93Jx-UwJZ_/view?usp=drive_link">GEA Safety 2</option>
         </select>
@@ -56,6 +55,18 @@
             } else {
                 // Nếu sai: hiện thông báo lỗi
                 errorMsg.innerHTML = "Mật khẩu không đúng, vui lòng thử lại!";
+            }
+        }
+
+        function showLink() {
+            var select = document.getElementById("modelSelect");
+            var result = document.getElementById("result");
+            var link = select.value;
+
+            if (link) {
+                result.innerHTML = 'Hướng dẫn thao tác: <a href="' + link + '" target="_blank">Xem</a>';
+            } else {
+                result.innerHTML = "";
             }
         }
     </script>
